@@ -107,8 +107,19 @@ Build a dockerfile and include instructions how to build the image, start the co
 ```
 
 **Informational**
+
 To run tests
 
 ```
 npm test
 ```
+
+**TODO**
+
+As you can see I attempted to keep the dependencies at a minimum, with only Express being required. I would like to note that the util/fetchRemoteData.js could use some tests, but it is really just a helper for converting the http.get() into a Promise like interface.
+
+- [] Use mocks in the test
+- [] Add tests for fetchRemoteData.js(mocks would be helpful here)
+- [] Think of a better name than NewService
+- [] Make the ids used and data to iterate / filter and map over more generic and provided during instantiation, i.e. `(options, dataToFilterMapFrom, ...allDataToIterate)`
+- [] Talk with Merrill Corp. on Monday / Tuesday sometime between 11am and 2pm;
