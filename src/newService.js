@@ -29,7 +29,10 @@ module.exports = function NewService(
     const results = [];
 
     for (let user of allUsers) {
-      user.projectIds = projects.filter(p => p.userId === user.id);
+      user.projectIds = projects
+        .filter(p => p.userId === user.id)
+        .map(p => p.projectId);
+
       results.push(user);
     }
 
